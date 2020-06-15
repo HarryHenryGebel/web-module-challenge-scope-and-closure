@@ -126,6 +126,22 @@ function finalScore(inningFunction, innings){
 
    Final Score: 6 - 10 */
 
+function toOrdinal(cardinal) {
+  cardinal = parseInt(cardinal); // make sure it's an int
+  const tens = cardinal % 10,
+        hundreds = cardinal % 100;
+  if (tens == 1 && hundreds != 11) {
+    return cardinal + "st";
+  }
+  if (tens == 2 && hundreds != 12) {
+    return cardinal + "nd";
+  }
+  if (tens == 3 && hundreds != 13) {
+    return cardinal + "rd";
+  }
+  return cardinal + "th";
+}
+
 function scoreboard(inningFunction, innings) {
   let homeScore = 0;
   let awayScore = 0;
