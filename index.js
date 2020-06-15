@@ -126,20 +126,21 @@ function finalScore(inningFunction, innings){
 
    Final Score: 6 - 10 */
 
+/* Convert a cardinal number or a string representing a cardinal number to an
+   ordinal number. */
 function toOrdinal(cardinal) {
-  cardinal = parseInt(cardinal); // make sure it's an int
-  const tens = cardinal % 10,
-        hundreds = cardinal % 100;
-  if (tens == 1 && hundreds != 11) {
+  cardinal = parseInt(cardinal); // make sure it's an integer
+  const lastDigit = cardinal % 10, // figure out last digit
+        lastTwoDigits = cardinal % 100; // and last two digits
+
+  if (lastDigit == 1 && lastTwoDigits != 11) // ends in 1 but not 11
     return cardinal + "st";
-  }
-  if (tens == 2 && hundreds != 12) {
+  else if (lastDigit == 2 && lastTwoDigits != 12) // ends in 1 but not 12
     return cardinal + "nd";
-  }
-  if (tens == 3 && hundreds != 13) {
+  else if (lastDigit == 3 && lastTwoDigits != 13) // ends in 3 but not 13
     return cardinal + "rd";
-  }
-  return cardinal + "th";
+  else
+    return cardinal + "th"; // everything else ends in th
 }
 
 function scoreboard(inningFunction, innings) {
