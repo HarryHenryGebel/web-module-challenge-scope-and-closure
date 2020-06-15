@@ -138,7 +138,7 @@ function toOrdinal(cardinal) {
 
   /* The rules of making ordinal numbers:
    * Teens always end in "th"
-   * Otherwise, 1 ends "st"
+   * Otherwise, 1 ends in "st"
    * 2 ends in "nd"
    * 3 ends in "rd"
    * everything else ends in "th" */
