@@ -134,7 +134,7 @@ function toOrdinal(cardinal) {
         lastTwoDigits = cardinal % 100; // figure out last two digits
 
   // figure out if number is in the teens
-  const teensp = (parseInt(lastTwoDigits / 10) === 1);
+  const teensp = (Math.floor(lastTwoDigits / 10) === 1);
 
   /* The rules of making ordinal numbers:
    * Teens always end in "th"
