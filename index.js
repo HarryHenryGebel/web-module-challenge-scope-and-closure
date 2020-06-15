@@ -29,22 +29,22 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  *
  * 1. What is the difference between counter1 and counter2?
- *
- * counter1() uses a closure and returns a function to access the
- * counter, counter2() uses a global variable and increments the
- * counter directly. counter1() can produce any number of counters
- * that can fit in the computer's memory, counter2() can only manage a
- * single counter.
- *
+
+   counter1() uses a closure and returns a function to access the
+   counter, counter2() uses a global variable and increments the
+   counter directly. counter1() can produce any number of counters
+   that can fit in the computer's memory, counter2() can only manage a
+   single counter.
+
  * 2. Which of the two uses a closure? How can you tell?
- *
- * counter1() . The variable is inside brackets.
- *
+
+   counter1() . The variable is inside brackets.
+
  * 3. In what scenario would the counter1 code be preferable? In what
  * scenario would counter2 be better?
- *
- * There is no situation where counter2() would be preferable.
- *
+
+   There is no situation where counter2() would be preferable.
+
  */
 
 // counter1 code
