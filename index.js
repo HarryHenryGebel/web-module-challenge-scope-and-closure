@@ -72,7 +72,7 @@ function counter2() {
    number between 0 and 2. */
 
 function inning(){
-  return Math.floor(Math.Random() * 3);
+  return Math.floor(Math.random() * 3);
 }
 
 /* Task 3: finalScore()
