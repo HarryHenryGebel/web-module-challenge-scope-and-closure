@@ -17,7 +17,7 @@
  * should return 'foofoo'.
  */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+  return callback(stringList[0]);
 }
 
 // ⭐️ Example Challenge END ⭐️
@@ -52,7 +52,7 @@ function counterMaker() {
   let count = 0;
   return function counter() {
     return count++;
-  }
+  };
 }
 
 const counter1 = counterMaker();
