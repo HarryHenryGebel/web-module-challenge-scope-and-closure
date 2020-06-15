@@ -91,10 +91,17 @@ function inning(){
 
 */
 
-function finalScore(/*code Here*/){
+function finalScore(inningFunction, innings){
+  let homeScore = 0;
+  let awayScore = 0;
 
-  /*Code Here*/
+  for(_ = 0; _ < innings; _++) {
+    homeScore += inningFunction();
+    awayScore += inningFunction();
+  }
 
+  return {home: homeScore,
+          away: awayScore};
 }
 
 /* Task 4:
