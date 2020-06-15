@@ -129,7 +129,6 @@ function finalScore(inningFunction, innings){
 /* Convert a cardinal number or a string representing a cardinal number to an
    ordinal number. */
 function toOrdinal(cardinal) {
-  cardinal = parseInt(cardinal); // make sure it's an integer
   const lastDigit = cardinal % 10, // figure out last digit
         lastTwoDigits = cardinal % 100; // figure out last two digits
 
