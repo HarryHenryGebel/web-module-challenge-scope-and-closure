@@ -131,16 +131,27 @@ function finalScore(inningFunction, innings){
 function toOrdinal(cardinal) {
   cardinal = parseInt(cardinal); // make sure it's an integer
   const lastDigit = cardinal % 10, // figure out last digit
-        lastTwoDigits = cardinal % 100; // and last two digits
+        lastTwoDigits = cardinal % 100; // figure out last two digits
 
-  if (lastDigit == 1 && lastTwoDigits != 11) // ends in 1 but not 11
+  // figure out if number is in the teens
+  const teensp = (parseInt(last2Digits / 10) == 1);
+
+  /* The rules of making ordinal numbers:
+   * Teens always end in "th"
+   * Otherwise, 1 ends "st"
+   * 2 ends in "nd"
+   * 3 ends in "rd"
+   * everything else ends in "th" */
+  if (teensp) // teens always end in "th"
+    return cardinal + "th";
+  else if (lastDigit == 1) // Otherwise, 1 ends in "st"
     return cardinal + "st";
-  else if (lastDigit == 2 && lastTwoDigits != 12) // ends in 1 but not 12
+  else if (lastDigit == 2) // 2 ends in "nd"
     return cardinal + "nd";
-  else if (lastDigit == 3 && lastTwoDigits != 13) // ends in 3 but not 13
+  else if (lastDigit == 3) // 3 ends in "rd"
     return cardinal + "rd";
   else
-    return cardinal + "th"; // everything else ends in th
+    return cardinal + "th"; // everything else ends in "th"
 }
 
 function scoreboard(inningFunction, innings) {
