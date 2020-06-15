@@ -146,11 +146,12 @@ function scoreboard(inningFunction, innings) {
   let homeScore = 0;
   let awayScore = 0;
 
-  for(_ = 0; _ < innings; _++) {
+  for(inning = 0; inning < innings; inning++) {
     homeScore += inningFunction();
     awayScore += inningFunction();
-    console.log(``);
+    console.log(
+      `${toOrdinal(inning + 1)} inning: ${homeScore} - ${awayScore}`);
   }
 
-  console.log(`Final Score: ${homeScore} - ${awayscore}`);
+  console.log(`Final Score: ${homeScore} - ${awayScore}`);
 }
