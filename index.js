@@ -126,6 +126,15 @@ function finalScore(inningFunction, innings){
 
    Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inningFunction, innings) {
+  let homeScore = 0;
+  let awayScore = 0;
+
+  for(_ = 0; _ < innings; _++) {
+    homeScore += inningFunction();
+    awayScore += inningFunction();
+    console.log(``);
+  }
+
+  console.log(`Final Score: ${homeScore} - ${awayscore}`);
 }
