@@ -42,6 +42,11 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+**A closure is a variable scope that is able to persist after the
+execution of the containing block, provided an object outside the
+scope retains a reference to any objects inside the scope.**
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -62,9 +67,30 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+a. Where is closure used in this code?
+
+**The block defining ```personalDice()```.**
+
+How can you tell?
+
+**The block defining ```personalDice()``` is persisted by returning the
+created function to the caller.**
+
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same?
+
+**The argument ```name``` passed in to ```personalDice()``` when the
+closure is created. The anonymous function created and returned by the
+same call.**
+
+What could change?
+
+**The constant ```newRoll``` created within the scope of the anonymous
+function returned by ```personalDice()```.**
+
+c. What is the lexical scope of `newRoll`?
+
+**An individual invocation of the anonymous function returned by
+```personalDice()```.
 
 ### Task 2c - Exit Ticket
 
