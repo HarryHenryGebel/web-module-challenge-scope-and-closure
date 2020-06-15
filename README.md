@@ -90,7 +90,7 @@ function returned by ```personalDice()```.**
 c. What is the lexical scope of `newRoll`?
 
 **An individual invocation of the anonymous function returned by
-```personalDice()```.
+```personalDice()```.**
 
 ### Task 2c - Exit Ticket
 
