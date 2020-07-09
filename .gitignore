@@ -1,0 +1,20 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+
+# Autosave
+\#*\#
+
+# impatient-mode sockets
+.\#*
+
+# scratch directory for expirimental work
+scratch
